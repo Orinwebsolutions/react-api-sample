@@ -9,7 +9,7 @@ Clone this repo in to you project directory. This project example of component w
 |--Users
     |--User
 
-01) Stateless functions component in user componenet
+01) Stateless functions component in user component
 02) Lifted local states on Users to User
 03) Array mapping
 04) Fetching API
