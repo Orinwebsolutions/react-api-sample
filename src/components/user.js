@@ -1,27 +1,27 @@
-import React, { Component } from "react";
+import React from "react";
 
-class User extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userid: this.props.item.userId,
-      userTitle: this.props.item.title,
-      userBody: this.props.item.body,
-      id: this.props.item.id,
-    };
-  }
-
-  render() {
-    return (
-      <tr>
-        <td>{this.state.id}</td>
-        <td>{this.state.userTitle}</td>
-        <td>{this.state.userBody}</td>
-        <td>{this.state.userid}</td>
-        <td><a href={"postid="+this.state.id}>User Detail</a></td>
-      </tr>
-    );
-  }
-}
+const User = (props) => {
+  const { userId, title, body, id } = props.item;
+  // const {singleResult} = props.singleResult;
+  let linkExpression = props.singleResult === false ? "User Detail" : "Go back";
+  let postID = props.singleResult === false ? id : "";
+  return (
+    <tr>
+      <td>{id}</td>
+      <td>{title}</td>
+      <td>{body}</td>
+      <td>{userId}</td>
+      <td>
+        <button
+          onClick={() => props.handleChildSelect(postID)}
+          className="btn btn-primary link-button"
+          variant="outline-primary"
+        >
+          {linkExpression}
+        </button>
+      </td>
+    </tr>
+  );
+};
 
 export default User;
