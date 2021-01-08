@@ -24,9 +24,8 @@ class Users extends Component {
   };
 
   triggerApi(id) {
-    let apiurl = !id
-      ? "https://jsonplaceholder.typicode.com/posts/"
-      : "https://jsonplaceholder.typicode.com/posts/" + id;
+    let apiurl = "https://jsonplaceholder.typicode.com/posts/";
+    apiurl = !id ? apiurl : apiurl + id;
 
     this.setState({
       loading: true,

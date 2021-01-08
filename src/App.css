@@ -28,6 +28,9 @@
   display: block !important;
   margin: 50px auto;
 }
+button{
+  white-space: nowrap;
+}
 
 @keyframes App-logo-spin {
   from {

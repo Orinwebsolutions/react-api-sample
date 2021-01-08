@@ -2,9 +2,16 @@ import React from "react";
 
 const User = (props) => {
   const { userId, title, body, id } = props.item;
-  // const {singleResult} = props.singleResult;
-  let linkExpression = props.singleResult === false ? "User Detail" : "Go back";
-  let postID = props.singleResult === false ? id : "";
+  let linkExpression,postID,clsNames;
+  if(props.singleResult === false ){
+    linkExpression = "User Detail";
+    postID = id ;
+    clsNames = "btn btn-primary"
+  }else{
+    linkExpression = "Go back";
+    postID = "";
+    clsNames = "btn btn-secondary"
+  }
   return (
     <tr>
       <td>{id}</td>
@@ -14,7 +21,7 @@ const User = (props) => {
       <td>
         <button
           onClick={() => props.handleChildSelect(postID)}
-          className="btn btn-primary link-button"
+          className={clsNames}
           variant="outline-primary"
         >
           {linkExpression}
