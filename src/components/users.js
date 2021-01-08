@@ -12,6 +12,7 @@ class Users extends Component {
     };
   }
   componentDidMount() {
+    // console.log(qs.parse(this.props.location.search, { ignoreQueryPrefix: true }).__firebase_request_key);
     fetch("https://jsonplaceholder.typicode.com/posts/")
       .then((res) => res.json())
       .then(

@@ -10,7 +10,7 @@ class User extends Component {
       id: this.props.item.id,
     };
   }
-  
+
   render() {
     return (
       <tr>
