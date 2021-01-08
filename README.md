@@ -1,3 +1,5 @@
+# React sample API fetching and display
+
 # Getting Started
 
 Clone this repo in to you project directory. This project example of component which include fetching details from API listed down inside table
@@ -10,7 +12,7 @@ Clone this repo in to you project directory. This project example of component w
     |--User
 
 01) Stateless functions component in user component
-02) Lifted local states on Users to User
+02) Lifted local-states on User to Apps which syn on navibar total
 03) Array mapping
 04) Fetching API
 

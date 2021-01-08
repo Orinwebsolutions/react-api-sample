@@ -1,16 +1,12 @@
 import React from "react";
 
-const Navibar = () => {
+const Navibar = (props) => {
   return (
-    <React.Fragment>
-      <nav className="navbar navbar-light bg-light">
-        <div className="container-fluid">
-          <a href="#" className="navbar-brand">
-            Navbar
-          </a>
-        </div>
-      </nav>
-    </React.Fragment>
+    <nav className="navbar navbar-light bg-light">
+      <div className="container-fluid">
+        Total Item fetch : {props.totalFetchCount}
+      </div>
+    </nav>
   );
 };
 
